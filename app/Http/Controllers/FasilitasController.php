@@ -97,6 +97,7 @@ class FasilitasController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Fasilitas::findOrFail($id)->delete();
+        return response()->json(['success' => true], 200);
     }
 }
