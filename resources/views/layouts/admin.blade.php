@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <title>HOTELLY</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('templates/admin')}}/plugins/images/favicon.png">
@@ -124,6 +125,16 @@
     <script src="{{asset('templates/admin')}}/js/sidebarmenu.js"></script>
     <!--Custom JavaScript -->
     <script src="{{asset('templates/admin')}}/js/custom.js"></script>
+    <script type="text/javascript">
+        var APP_URL = "{!! url('/') !!}";
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+    </script>
+
     @yield('script')
 </body>
 
