@@ -25,7 +25,7 @@
         <header class="topbar" data-navbarbg="skin5">
             <nav class="navbar top-navbar navbar-expand-md navbar-dark">
                 <div class="navbar-header" data-logobg="skin6">
-                    <a class="navbar-brand" href="{{route('home')}}">
+                    <a class="navbar-brand" href="{{route('dashboard.index')}}">
                         <b class="logo-icon">
                             <img src="{{asset('templates/admin')}}/plugins/images/logo-icon.png" alt="homepage" />
                         </b>
@@ -58,9 +58,15 @@
                     <ul id="sidebarnav">
                         <!-- User Profile-->
                         <li class="sidebar-item pt-2">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('home')}}" aria-expanded="false">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('dashboard.index')}}" aria-expanded="false">
                                 <i class="far fa-clock" aria-hidden="true"></i>
                                 <span class="hide-menu">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('beranda')}}" aria-expanded="false">
+                                <i class="fa fa-table" aria-hidden="true"></i>
+                                <span class="hide-table">Halaman Utama</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
