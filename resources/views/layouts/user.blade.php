@@ -40,9 +40,9 @@
 
             <nav class="nav-menu d-none d-lg-block">
                 <ul>
-                    <li class="active"><a href="{{route('beranda')}}">Beranda</a></li>
-                    <li><a href="{{route('beranda.kamar')}}">Kamar</a></li>
-                    <li><a href="{{route('beranda.fasilitas')}}">Fasilitas</a></li>
+                    <li class="{{Request::segment(1) == null ? 'active' : ''}}"><a href="{{route('beranda')}}">Beranda</a></li>
+                    <li class="{{Request::segment(1) == 'data-kamar' ? 'active' : ''}}"><a href="{{route('beranda.kamar')}}">Kamar</a></li>
+                    <li class="{{Request::segment(1) == 'data-fasilitas' ? 'active' : ''}}"><a href="{{route('beranda.fasilitas')}}">Fasilitas</a></li>
                     @guest
                     @if (Route::has('login'))
                     <li>
@@ -56,7 +56,10 @@
                     </li>
                     @endif
                     @else
-                    <li class="nav-item dropdown">
+                    <li>
+                        <a href="{{ route('dashboard.index') }}">{{ __('Dashboard') }}</a>
+                    </li>
+                    <li>
                         <a href="{{ route('logout') }}" onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
                             {{ __('Logout') }}
