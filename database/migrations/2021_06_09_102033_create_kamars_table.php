@@ -13,8 +13,12 @@ class CreateKamarsTable extends Migration
      */
     public function up()
     {
-        Schema::create('kamars', function (Blueprint $table) {
+        Schema::create('kamar', function (Blueprint $table) {
             $table->id();
+            $table->string('name', 150);
+            $table->bigInteger('price')->default(0);
+            $table->string('image');
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }
@@ -26,6 +30,6 @@ class CreateKamarsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kamars');
+        Schema::dropIfExists('kamar');
     }
 }
