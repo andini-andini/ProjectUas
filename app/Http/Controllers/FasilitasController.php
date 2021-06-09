@@ -74,7 +74,8 @@ class FasilitasController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = Fasilitas::findOrFail($id);
+        return view('admin.fasilitas.edit', compact('data'));
     }
 
     /**
@@ -86,7 +87,8 @@ class FasilitasController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        Fasilitas::findOrFail($id)->update($request->only(['name']));
+        return redirect()->route('fasilitas.index')->with('success', 'Data berhasil diubah');
     }
 
     /**

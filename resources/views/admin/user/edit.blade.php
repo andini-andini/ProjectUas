@@ -83,26 +83,4 @@
     </div>
 </div>
 
-<!-- Modal -->
-<div class="modal fade" id="deleteUserModal" tabindex="-1" aria-labelledby="deleteUserModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="deleteUserModalLabel">Konfirmasi Hapus Data</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p>Apakah kamu yakin akan menghapus data ini?</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary m-1" data-bs-dismiss="modal">Close</button>
-                <form id="form-delete-user" class="m-1">
-                    @csrf
-                    <button type="submit" class="btn btn-danger m-1">Hapus</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-
 @endsection
