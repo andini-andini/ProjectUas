@@ -15,6 +15,7 @@ class CreateReservasisTable extends Migration
     {
         Schema::create('reservasi', function (Blueprint $table) {
             $table->id();
+            $table->string('code', 10)->unique();
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->unsignedBigInteger('kamar_id');
