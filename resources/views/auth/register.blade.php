@@ -60,6 +60,7 @@
             <div class="signup-image">
                 <figure><img src="{{asset('templates/auth')}}/images/signup-image.jpg" alt="sing up image"></figure>
                 <a href="{{route('login')}}" class="signup-image-link">Sudah punya akun? Login sekarang</a>
+                <a href="{{route('beranda')}}" class="signup-image-link">Kembali ke beranda</a>
             </div>
         </div>
     </div>
