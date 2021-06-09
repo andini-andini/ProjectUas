@@ -13,7 +13,8 @@
 
             <div class="signin-form">
                 <h2 class="form-title">Login</h2>
-                <form method="POST" class="register-form" id="login-form">
+                <form method="POST" class="register-form" id="login-form" action="{{route('login')}}">
+                    @csrf
                     <div class="form-group">
                         <label for="email"><i class="zmdi zmdi-email"></i></label>
                         <input type="email" name="email" id="email" placeholder="Your Email" />
@@ -33,7 +34,7 @@
                     </div>
                 </form>
                 <div class="social-login">
-                    <a href="#" class="signup-image-link">Kembali ke beranda</a>
+                    <a href="{{route('beranda')}}" class="signup-image-link">Kembali ke beranda</a>
                 </div>
             </div>
         </div>
