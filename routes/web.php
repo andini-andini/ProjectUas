@@ -1,5 +1,10 @@
 <?php
 
+use App\Http\Controllers\FasilitasController;
+use App\Http\Controllers\KamarController;
+use App\Http\Controllers\ReservasiController;
+use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +25,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('user', UserController::class);
+Route::resource('fasilitas', FasilitasController::class);
+Route::resource('kamar', KamarController::class);
+Route::resource('reservasi', ReservasiController::class);
