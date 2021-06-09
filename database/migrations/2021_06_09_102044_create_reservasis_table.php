@@ -13,8 +13,17 @@ class CreateReservasisTable extends Migration
      */
     public function up()
     {
-        Schema::create('reservasis', function (Blueprint $table) {
+        Schema::create('reservasi', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->unsignedBigInteger('kamar_id');
+            $table->foreign('kamar_id')->references('id')->on('kamar');
+            $table->date('check_in');
+            $table->date('check_out');
+            $table->integer('guest');
+            $table->text('description')->nullable();
+            $table->boolean('status')->nullable()->default(false);
             $table->timestamps();
         });
     }
@@ -26,6 +35,6 @@ class CreateReservasisTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('reservasis');
+        Schema::dropIfExists('reservasi');
     }
 }
