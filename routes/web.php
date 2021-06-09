@@ -29,7 +29,10 @@ Auth::routes();
 Route::middleware(['auth'])->group(function () {
     Route::resource('dashboard', DashboardController::class);
     Route::middleware(['admin'])->group(function () {
+        Route::get('api/reservasi/get-status/{id}', [ReservasiController::class, 'getStatus'])->name('api.getstatus');
         Route::get('api/kamar-fasilitas/{id}', [KamarController::class, 'kamarFasilitas'])->name('api.kamarfasilitas');
+        Route::put('/reservasi/edit-status/{id}', [ReservasiController::class, 'editStatus']);
+
         Route::resource('user', UserController::class);
         Route::resource('fasilitas', FasilitasController::class);
         Route::resource('kamar', KamarController::class);

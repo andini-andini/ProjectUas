@@ -39,22 +39,17 @@
         <div class="col-md-6">
             <div class="card shadow">
                 <div class="card-header">
-                    Edit Reservasi
+                    Tambah Reservasi
                 </div>
                 <div class="card-body">
-                    <form action="{{route('reservasi.update', $data->id)}}" method="POST">
+                    <form action="{{route('reservasi.store')}}" method="POST">
                         @csrf
-                        @method('PUT')
-                        <div class="form-group mb-3">
-                            <label class="form-check-label" for="code">Code</label>
-                            <input type="text" class="form-control" value="{{ $data->code}}" disabled readonly>
-                        </div>
                         <div class="form-group mb-3">
                             <label class="form-check-label" for="user_id">User</label>
                             <select class="form-control @error('user_id') is-invalid @enderror" id="user_id" name="user_id">
                                 <option selected hidden disabled>-- Pilih User --</option>
                                 @foreach ($user as $u)
-                                <option value="{{ $u->id }}" {{$u->id == $data->user_id ? 'selected': ''}}>{{ $u->name }}</option>
+                                <option value="{{ $u->id }}">{{ $u->name }}</option>
                                 @endforeach
                             </select>
                             @error('user_id')
@@ -67,7 +62,7 @@
                             <select class="form-control @error('kamar_id') is-invalid @enderror" id="kamar_id" name="kamar_id">
                                 <option selected hidden disabled>-- Pilih Kamar --</option>
                                 @foreach ($kamar as $u)
-                                <option value="{{ $u->id }}" {{$u->id == $data->kamar_id ? 'selected': ''}}>{{ $u->name }}</option>
+                                <option value="{{ $u->id }}">{{ $u->name }}</option>
                                 @endforeach
                             </select>
                             @error('kamar_id')
@@ -76,21 +71,21 @@
                         </div>
                         <div class="form-group mb-3">
                             <label>Check In</label>
-                            <input type="date" class="form-control @error('check_in') is-invalid @enderror" id="check_in" name="check_in" value="{{ $data->check_in}}" placeholder="Enter check_in">
+                            <input type="date" class="form-control @error('check_in') is-invalid @enderror" id="check_in" name="check_in" value="{{ old('check_in')}}" placeholder="Enter check_in">
                             @error('check_in')
                             <small class="text-danger">{{$message}}</small>
                             @enderror
                         </div>
                         <div class="form-group mb-3">
                             <label>Check Out</label>
-                            <input type="date" class="form-control @error('check_out') is-invalid @enderror" id="check_out" name="check_out" value="{{ $data->check_out}}" placeholder="Enter check_in">
+                            <input type="date" class="form-control @error('check_out') is-invalid @enderror" id="check_out" name="check_out" value="{{ old('check_out')}}" placeholder="Enter check_in">
                             @error('check_out')
                             <small class="text-danger">{{$message}}</small>
                             @enderror
                         </div>
                         <div class="form-group mb-3">
                             <label>Guest</label>
-                            <input type="number" min="1" class="form-control @error('guest') is-invalid @enderror" id="guest" name="guest" value="{{ $data->guest}}" placeholder="Enter guest">
+                            <input type="number" min="1" class="form-control @error('guest') is-invalid @enderror" id="guest" name="guest" value="{{ old('guest')}}" placeholder="Enter guest">
                             @error('guest')
                             <small class="text-danger">{{$message}}</small>
                             @enderror
@@ -98,7 +93,7 @@
 
                         <div class="form-group mb-3">
                             <label>Description</label>
-                            <textarea class="form-control @error('description') is-invalid @enderror" id="description" name="description" rows="3" placeholder="Enter description">{{$data->description}}</textarea>
+                            <textarea class="form-control @error('description') is-invalid @enderror" id="description" name="description" rows="3" placeholder="Enter description"></textarea>
 
                             @error('price')
                             <small class="text-danger">{{$message}}</small>
