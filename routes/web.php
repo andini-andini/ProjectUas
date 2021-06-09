@@ -29,6 +29,7 @@ Auth::routes();
 Route::middleware(['auth'])->group(function () {
     Route::resource('dashboard', DashboardController::class);
     Route::middleware(['admin'])->group(function () {
+        Route::get('api/kamar-fasilitas/{id}', [KamarController::class, 'kamarFasilitas'])->name('api.kamarfasilitas');
         Route::resource('user', UserController::class);
         Route::resource('fasilitas', FasilitasController::class);
         Route::resource('kamar', KamarController::class);

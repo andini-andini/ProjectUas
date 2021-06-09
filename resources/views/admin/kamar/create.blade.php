@@ -45,15 +45,14 @@
         <div class="col-md-6">
             <div class="card shadow">
                 <div class="card-header">
-                    Edit kamar
+                    Tambah kamar
                 </div>
                 <div class="card-body">
-                    <form action="{{route('kamar.update', $data->id)}}" method="POST" enctype="multipart/form-data">
+                    <form action="{{route('kamar.store')}}" method="POST" enctype="multipart/form-data">
                         @csrf
-                        @method('PUT')
                         <div class="form-group mb-3">
                             <label>Name</label>
-                            <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{ $data->name}}" placeholder="Enter name">
+                            <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{ old('name')}}" placeholder="Enter name">
 
                             @error('name')
                             <small class="text-danger">{{$message}}</small>
@@ -61,7 +60,7 @@
                         </div>
                         <div class="form-group mb-3">
                             <label>Price</label>
-                            <input type="number" class="form-control @error('price') is-invalid @enderror" id="price" name="price" value="{{ $data->price}}" placeholder="Enter price">
+                            <input type="number" class="form-control @error('price') is-invalid @enderror" id="price" name="price" value="{{ old('price')}}" placeholder="Enter price">
 
                             @error('price')
                             <small class="text-danger">{{$message}}</small>
@@ -82,7 +81,7 @@
                         </div>
                         <div class="form-group mb-3">
                             <label>Description</label>
-                            <textarea class="form-control @error('description') is-invalid @enderror" id="description" name="description" rows="3" placeholder="Enter description">{{$data->description}}</textarea>
+                            <textarea class="form-control @error('description') is-invalid @enderror" id="description" name="description" rows="3" placeholder="Enter description"></textarea>
 
                             @error('price')
                             <small class="text-danger">{{$message}}</small>
@@ -109,7 +108,6 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
 {{-- <script src="{{ asset('js/kamar.js') }}"></script> --}}
-
 <script>
     $("#fasilitas").select2({
         placeholder: "Pilih fasilitas"
@@ -121,19 +119,6 @@
             return null;
         }
     , });
-
-    $(document).ready(function() {
-        var id = pathURL.split("/")[2];
-
-        $.get(`${APP_URL}/api/kamar-fasilitas/${id}`, function(res) {
-            $.each(res, function(i, e) {
-                $("#fasilitas option[value='" + e + "']")
-                    .prop("selected", true)
-                    .trigger("change");
-            });
-        })
-
-    });
 
 </script>
 @endsection

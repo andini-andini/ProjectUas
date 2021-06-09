@@ -47,14 +47,16 @@
                         @method('PUT')
                         <div class="form-group mb-3">
                             <label>Name</label>
-                            <input type="text" class="form-control" id="name" name="name" value="{{$data->name}}">
+                            <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{$data->name}}">
+
                             @error('name')
                             <small class="text-danger">{{$message}}</small>
                             @enderror
                         </div>
                         <div class="form-group mb-3">
                             <label>Email</label>
-                            <input type="email" class="form-control" id="email" name="email" value="{{$data->email}}">
+                            <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" value="{{$data->email}}">
+
 
                             @error('email')
                             <small class="text-danger">{{$message}}</small>
@@ -62,7 +64,8 @@
                         </div>
                         <div class="form-group mb-3">
                             <label>Phone</label>
-                            <input type="number" class="form-control" id="phone" name="phone" value="{{$data->phone}}">
+                            <input type="number" class="form-control @error('phone') is-invalid @enderror" id="phone" name="phone" value="{{$data->phone}}">
+
 
                             @error('phone')
                             <small class="text-danger">{{$message}}</small>
@@ -70,7 +73,8 @@
                         </div>
                         <div class="form-group mb-3">
                             <label>Adress</label>
-                            <input type="text" class="form-control" id="address" name="address" value="{{$data->address}}">
+                            <input type="text" class="form-control @error('address') is-invalid @enderror" id="address" name="address" value="{{$data->address}}">
+
                             @error('address')
                             <small class="text-danger">{{$message}}</small>
                             @enderror

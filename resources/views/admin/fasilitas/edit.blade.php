@@ -47,7 +47,8 @@
                         @method('PUT')
                         <div class="form-group mb-3">
                             <label>Name</label>
-                            <input type="text" class="form-control" id="name" name="name" value="{{$data->name}}">
+                            <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{$data->name}}">
+
                             @error('name')
                             <small class="text-danger">{{$message}}</small>
                             @enderror

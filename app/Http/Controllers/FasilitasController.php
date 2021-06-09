@@ -40,7 +40,6 @@ class FasilitasController extends Controller
      */
     public function create()
     {
-        //
     }
 
     /**

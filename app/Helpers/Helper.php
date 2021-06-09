@@ -37,6 +37,7 @@ function deleteFile($data, $path)
     if (isset($data) && $exist) {
         Storage::delete('public/' . $path . '/' . $data);
     }
+    return false;
 }
 
 function autonumber($table, $primary, $prefix)

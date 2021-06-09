@@ -127,6 +127,8 @@
     <script src="{{asset('templates/admin')}}/js/custom.js"></script>
     <script type="text/javascript">
         var APP_URL = "{!! url('/') !!}";
+        var pathURL = document.location.pathname;
+
         $.ajaxSetup({
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
