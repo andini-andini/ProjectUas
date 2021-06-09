@@ -8,4 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class Fasilitas extends Model
 {
     use HasFactory;
+
+    protected $table = 'fasilitas';
+
+    protected $fillable = [
+        'name',
+        'description',
+    ];
+
+    public function kamar()
+    {
+        return $this->belongsToMany(Kamar::class, 'kamar_fasilitas', 'kamar_id', 'fasilitas_id');
+    }
 }
