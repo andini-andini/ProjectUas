@@ -74,7 +74,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = User::findOrFail($id);
+        return view('admin.user.edit', compact('data'));
     }
 
     /**
@@ -86,7 +87,8 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        User::findOrFail($id)->update($request->only(['name', 'email', 'address', 'phone']));
+        return redirect()->route('user.index')->with('success', 'Data berhasil diubah');
     }
 
     /**
@@ -99,6 +101,5 @@ class UserController extends Controller
     {
         User::findOrFail($id)->delete();
         return response()->json(['success' => true], 200);
-        // return redirect()->route('dashboard.index')->with('success', 'Data berhasil dihapus');
     }
 }

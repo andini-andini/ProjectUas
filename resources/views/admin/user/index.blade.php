@@ -43,7 +43,7 @@
         <div class="col-12">
             <div class="card shadow">
                 <div class="card-header">
-                    <h3 class="m-0">Data User</h3>
+                    Data User
                 </div>
                 <div class="card-body">
                     <table id="table-users" class="table table-bordered table-striped">
