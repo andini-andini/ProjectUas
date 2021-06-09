@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\FasilitasRequest;
+use App\Models\Fasilitas;
 use Illuminate\Http\Request;
+use Yajra\DataTables\Facades\DataTables;
 
 class FasilitasController extends Controller
 {
@@ -11,9 +14,23 @@ class FasilitasController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $data = Fasilitas::get();
+        if ($request->ajax()) {
+            return DataTables::of($data)
+                ->addIndexColumn()
+                ->addColumn('action', function ($data) {
+                    $button = '<div class="btn-group" role="group">';
+                    $button .= '<a href="/fasilitas/' . $data->id . '/edit" class="btn btn-sm btn-info"><i class="fas fa-edit text-light"></i></a>';
+                    $button .= '<a href="javascript:void(0)" data-bs-toggle="modal" data-bs-id="' . $data->id . '" data-bs-target="#deleteFasilitasModal" class="btn btn-sm btn-danger btn-delete-fasilitas text-light"><i class="fas fa-trash"></i></a>';
+                    $button .= '</div>';
+                    return $button;
+                })
+                ->rawColumns(['action'])
+                ->make(true);
+        }
+        return view('admin.fasilitas.index', compact('data'));
     }
 
     /**
@@ -32,9 +49,10 @@ class FasilitasController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(FasilitasRequest $request)
     {
-        //
+        Fasilitas::create($request->only(['name']));
+        return redirect()->route('fasilitas.index')->with('success', 'Data berhasil disimpan');
     }
 
     /**

@@ -24,7 +24,6 @@ class UserController extends Controller
                     $button = '<div class="btn-group" role="group">';
                     $button .= '<a href="/user/' . $data->id . '/edit" class="btn btn-sm btn-info"><i class="fas fa-edit text-light"></i></a>';
                     $button .= '<a href="javascript:void(0)" data-bs-toggle="modal" data-bs-id="' . $data->id . '" data-bs-target="#deleteUserModal" class="btn btn-sm btn-danger btn-delete-user text-light"><i class="fas fa-trash"></i></a>';
-                    // $button .= '<button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-trash"></i></button>';
                     $button .= '</div>';
                     return $button;
                 })

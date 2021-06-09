@@ -45,40 +45,37 @@
                     <form action="{{route('user.update', $data->id)}}" method="POST">
                         @csrf
                         @method('PUT')
-                        <form>
-                            <div class="form-group mb-3">
-                                <label>Name</label>
-                                <input type="text" class="form-control" id="name" name="name" value="{{$data->name}}">
-                                @error('name')
-                                <small class="text-danger">{{$message}}</small>
-                                @enderror
-                            </div>
-                            <div class="form-group mb-3">
-                                <label>Email</label>
-                                <input type="email" class="form-control" id="email" name="email" value="{{$data->email}}">
+                        <div class="form-group mb-3">
+                            <label>Name</label>
+                            <input type="text" class="form-control" id="name" name="name" value="{{$data->name}}">
+                            @error('name')
+                            <small class="text-danger">{{$message}}</small>
+                            @enderror
+                        </div>
+                        <div class="form-group mb-3">
+                            <label>Email</label>
+                            <input type="email" class="form-control" id="email" name="email" value="{{$data->email}}">
 
-                                @error('email')
-                                <small class="text-danger">{{$message}}</small>
-                                @enderror
-                            </div>
-                            <div class="form-group mb-3">
-                                <label>Phone</label>
-                                <input type="number" class="form-control" id="phone" name="phone" value="{{$data->phone}}">
+                            @error('email')
+                            <small class="text-danger">{{$message}}</small>
+                            @enderror
+                        </div>
+                        <div class="form-group mb-3">
+                            <label>Phone</label>
+                            <input type="number" class="form-control" id="phone" name="phone" value="{{$data->phone}}">
 
-                                @error('phone')
-                                <small class="text-danger">{{$message}}</small>
-                                @enderror
-                            </div>
-                            <div class="form-group mb-3">
-                                <label>Adress</label>
-                                <input type="text" class="form-control" id="address" name="address" value="{{$data->address}}">
-                                @error('address')
-                                <small class="text-danger">{{$message}}</small>
-                                @enderror
-                            </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </form>
-
+                            @error('phone')
+                            <small class="text-danger">{{$message}}</small>
+                            @enderror
+                        </div>
+                        <div class="form-group mb-3">
+                            <label>Adress</label>
+                            <input type="text" class="form-control" id="address" name="address" value="{{$data->address}}">
+                            @error('address')
+                            <small class="text-danger">{{$message}}</small>
+                            @enderror
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
             </div>
