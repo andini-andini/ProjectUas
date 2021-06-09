@@ -97,6 +97,8 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        User::findOrFail($id)->delete();
+        return response()->json(['success' => true], 200);
+        // return redirect()->route('dashboard.index')->with('success', 'Data berhasil dihapus');
     }
 }
