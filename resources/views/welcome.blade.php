@@ -39,27 +39,39 @@
                     </div>
                 </div>
                 <div class="row">
+                    {{-- Jika data kamar kosong --}}
+                    @if ($kamar->isEmpty())
+                    <div class="col-12">
+                        <div class="alert alert-danger">
+                            Kamar masih belum tersedia.
+                        </div>
+                    </div>
+                    @else
+                    {{-- Jika data kamar ada --}}
+                    @foreach ($kamar as $item)
                     <div class="col-md-4 col-sm-4 col-xs-12">
                         <div class="single-blog">
                             <div class="single-blog-img">
-                                <a href="blog.html">
+                                <a href="{{route('beranda.showkamar', $item->id)}}">
                                     <img src="{{asset('templates/user')}}/assets/img/blog/1.jpg" alt="">
                                 </a>
                             </div>
-                            <div class="blog-text">
+                            <div class="blog-text mt-3">
                                 <h4>
-                                    <a href="blog.html">Assumenda repud eum veniam</a>
+                                    <a href="{{route('beranda.showkamar', $item->id)}}">{{$item->name}}</a>
                                 </h4>
                                 <p>
-                                    Lorem ipsum dolor sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi magnam quibusdam.sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi magnam quibusdam.
+                                    {{strlen($item->description) > 100 ? substr($item->description, 0, 100) . '...' : $item->description}}
                                 </p>
                             </div>
                             <span>
-                                <a href="blog.html" class="ready-btn">Detail</a>
+                                <a href="{{route('beranda.showkamar', $item->id)}}" class="ready-btn">Detail</a>
                             </span>
                         </div>
-                        <!-- Start single blog -->
                     </div>
+                    @endforeach
+                    @endif
+
                 </div>
             </div>
         </div>

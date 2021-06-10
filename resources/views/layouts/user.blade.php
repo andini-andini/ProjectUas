@@ -114,6 +114,7 @@
 
     <!-- Template Main JS File -->
     <script src="{{asset('templates/user')}}/assets/js/main.js"></script>
+    @yield('script')
 
 </body>
 
