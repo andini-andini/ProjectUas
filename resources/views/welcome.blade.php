@@ -53,7 +53,7 @@
                         <div class="single-blog">
                             <div class="single-blog-img">
                                 <a href="{{route('beranda.showkamar', $item->id)}}">
-                                    <img src="{{asset('templates/user')}}/assets/img/blog/1.jpg" alt="">
+                                    <img src="{{asset('storage/kamar/' . $item->image)}}" class="img-thumbnail" alt="">
                                 </a>
                             </div>
                             <div class="blog-text mt-3">
