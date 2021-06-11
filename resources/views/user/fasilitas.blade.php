@@ -50,28 +50,6 @@
                         </div>
                     </div>
                 </section>
-
-                {{-- <div class="row"> --}}
-                    {{-- Jika data kosong --}}
-                    {{-- @if ($fasilitas->isEmpty())
-                    <div class="col-12">
-                        <div class="alert alert-danger">
-                            Fasilitas masih belum tersedia.
-                        </div>
-                    </div>
-                    @else --}}
-                    {{-- Jika data kamar ada --}}
-                    {{-- @foreach ($fasilitas as $item)
-                    <div>
-                        <div>
-                            <div class="col-md-6">
-                                <span class="badge badge-info p-2">{{$item->name}}</span>
-                            </div>
-                        </div>
-                    </div>--}}
-                    {{-- @endforeach --}}
-                    {{-- @endif --}}
-
                 </div>
             </div>
         </div>
