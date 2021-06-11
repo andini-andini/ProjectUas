@@ -13,7 +13,7 @@
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="slider-content">
                             <div class="layer-1-1 hidden-xs wow animate__slideInUp animate__animated" data-wow-duration="2s" data-wow-delay=".2s">
-                                <h2 class="title1">WELCOME</h2>
+                                <h2 class="title1">WELCOME TO HOTELLY</h2>
                             </div>
                             <div class="layer-1-2 wow animate__fadeIn animate__animated" data-wow-duration="2s" data-wow-delay=".1s">
                                 <h1 class="title2">Helping Business Security & Peace of Mind for Your Family</h1>

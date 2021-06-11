@@ -99,7 +99,7 @@ a {
 }
 
 a:hover {
-  color: #3EC1D5;
+  color: #cda45e;
   text-decoration: none;
 }
 
@@ -121,7 +121,7 @@ body {
 .back-to-top {
   position: fixed;
   display: none;
-  background: #3EC1D5;
+  background: #00000069;
   color: #fff;
   padding: 6px 12px 9px 12px;
   font-size: 16px;
@@ -138,13 +138,13 @@ body {
 }
 
 .back-to-top:focus {
-  background: #3EC1D5;
+  background: #cda45e;
   color: #fff;
   outline: none;
 }
 
 .back-to-top:hover {
-  background: #3cd6ed;
+  background: #cda45e;
   color: #fff;
 }
 
@@ -253,11 +253,11 @@ div#preloader {
 }
 
 #header .logo h1 span {
-  color: #3ec1d5;
+  color: #d9ba85;
 }
 
 #header .logo h1 a, #header .logo h1 a:hover {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -328,7 +328,7 @@ div#preloader {
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
-  color: #3ec1d5;
+  color: #d9ba85;
   text-decoration: none;
 }
 
@@ -342,7 +342,7 @@ div#preloader {
   visibility: hidden;
   padding: 10px 0;
   background: #fff;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  box-shadow: 0px 0px 30px rgba(55, 59, 70, 0.25);
   transition: ease all 0.3s;
 }
 
@@ -366,7 +366,7 @@ div#preloader {
 }
 
 .nav-menu .drop-down ul a:hover, .nav-menu .drop-down ul .active > a, .nav-menu .drop-down ul li:hover > a {
-  color: #3ec1d5;
+  color: #d9ba85;
 }
 
 .nav-menu .drop-down > a:after {
@@ -454,14 +454,14 @@ div#preloader {
 .mobile-nav a {
   display: block;
   position: relative;
-  color: #0d2529;
+  color: #0a1e22;
   padding: 10px 20px;
   font-weight: 500;
   outline: none;
 }
 
 .mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
-  color: #3ec1d5;
+  color: #d9ba85;
   text-decoration: none;
 }
 
@@ -530,7 +530,7 @@ div#preloader {
 }
 
 .nivo-caption::after {
-  background: #444 none repeat scroll 0 0;
+  background: rgb(0, 0, 0) none repeat scroll 0 0;
   content: "";
   height: 100%;
   left: 0;
@@ -580,8 +580,8 @@ div#preloader {
 
 .layer-1-3 a.ready-btn:hover {
   color: #fff;
-  background: #3EC1D5;
-  border: 1px solid #3EC1D5;
+  background: #d9ba85;
+  border: 1px solid #d9ba85;
   text-decoration: none;
 }
 
@@ -1938,7 +1938,7 @@ preview-2
 }
 
 .single-blog .ready-btn:hover {
-  border: 1px solid #3EC1D5;
+  border: 1px solid #d9ba85;
   color: #fff;
 }
 
@@ -1973,7 +1973,7 @@ preview-2
 }
 
 .search-option button:hover {
-  color: #3ec1d5;
+  color: #d9ba85;
 }
 
 .left-blog h4 {
@@ -2031,8 +2031,8 @@ preview-2
 
 .ready-btn:hover {
   color: #fff;
-  background: #3EC1D5;
-  border: 1px solid #3EC1D5;
+  background: #d9ba85;
+  border: 1px solid #d9ba85;
   text-decoration: none;
 }
 
@@ -2455,26 +2455,26 @@ span.email-notes {
 }
 
 .footer-area-bottom {
-  background: #f1f1f1 none repeat scroll 0 0;
+  background: #000000 none repeat scroll 0 0;
   padding: 15px 0;
 }
 
 .copyright-text a:hover {
   text-decoration: underline;
-  color: #3EC1D5;
+  color: #cda45e;
 }
 
 .copyright-text a {
-  color: #444;
+  color: rgb(255, 255, 255);
 }
 
 .copyright > p {
   margin-bottom: 0;
-  color: #444;
+  color: rgb(255, 255, 255);
 }
 
 .copyright a, .credits a {
-  color: #3EC1D5;
+  color: #cda45e;
 }
 
 .credits {

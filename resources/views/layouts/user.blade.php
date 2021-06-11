@@ -35,7 +35,7 @@
         <div class="container d-flex">
 
             <div class="logo mr-auto">
-                <h1 class="text-light"><a href="{{route('beranda')}}"><span>H</span>OTELLY</a></h1>
+                <h1 class="text-light"><a href="{{route('beranda')}}"><span>HOTEL</span>LY</a></h1>
             </div>
 
             <nav class="nav-menu d-none d-lg-block">
@@ -56,9 +56,11 @@
                     </li>
                     @endif
                     @else
+                    @if (Auth::user()->role == "adm")
                     <li>
                         <a href="{{ route('dashboard.index') }}">{{ __('Dashboard') }}</a>
                     </li>
+                    @endif
                     <li>
                         <a href="{{ route('logout') }}" onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
