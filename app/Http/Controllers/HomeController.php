@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Fasilitas;
 use App\Models\Kamar;
 use App\Models\Reservasi;
 use Illuminate\Http\Request;
@@ -19,13 +20,13 @@ class HomeController extends Controller
     public function kamar()
     {
         $kamar = Kamar::get();
-        // return view('welcome', compact('kamar'));
         return view('user.kamar', compact('kamar'));
     }
 
     public function fasilitas()
     {
-        return view('user.fasilitas');
+        $fasilitas = Fasilitas::get();
+        return view('user.fasilitas', compact('fasilitas'));
     }
 
     public function showKamar($id)

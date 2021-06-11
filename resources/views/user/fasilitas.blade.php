@@ -14,28 +14,64 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class="single-blog">
-                            <div class="single-blog-img">
-                                <a href="blog.html">
-                                    <img src="{{asset('templates/user')}}/assets/img/blog/1.jpg" alt="">
-                                </a>
+
+                <section class="mb-5 py-5" style="min-height: 60vh">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row">
+                                    @if ($fasilitas->isEmpty())
+                                    <div class="col text-center">
+                                        <div class="alert alert-warning">
+                                            Data tidak ditemukan
+                                        </div>
+                                    </div>
+                                    @else
+                                    @foreach ($fasilitas as $item)
+                                    <div class="col-md-4 my-3">
+                                        <div class="card shadow rounded" data-aos="fade-up">
+                                            <div class="card-body">
+                                                <div class="row align-items-center">
+                                                    <div class="col-2 d-flex justify-content-center">
+                                                        <img src="http://hotelkalimosodo.my.id/template-hotel/assets/icon/checked.svg" height="30" width="30" alt="">
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <h5 class="card-title m-0">{{$item->name}}</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @endforeach
+                                    @endif
+                                </div>
                             </div>
-                            <div class="blog-text">
-                                <h4>
-                                    <a href="blog.html">Assumenda repud eum veniam</a>
-                                </h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi magnam quibusdam.sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi magnam quibusdam.
-                                </p>
-                            </div>
-                            <span>
-                                <a href="blog.html" class="ready-btn">Detail</a>
-                            </span>
                         </div>
-                        <!-- Start single blog -->
                     </div>
+                </section>
+
+                {{-- <div class="row"> --}}
+                    {{-- Jika data kosong --}}
+                    {{-- @if ($fasilitas->isEmpty())
+                    <div class="col-12">
+                        <div class="alert alert-danger">
+                            Fasilitas masih belum tersedia.
+                        </div>
+                    </div>
+                    @else --}}
+                    {{-- Jika data kamar ada --}}
+                    {{-- @foreach ($fasilitas as $item)
+                    <div>
+                        <div>
+                            <div class="col-md-6">
+                                <span class="badge badge-info p-2">{{$item->name}}</span>
+                            </div>
+                        </div>
+                    </div>--}}
+                    {{-- @endforeach --}}
+                    {{-- @endif --}}
+
                 </div>
             </div>
         </div>
