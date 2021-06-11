@@ -33,7 +33,6 @@
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top">
         <div class="container d-flex">
-
             <div class="logo mr-auto">
                 <h1 class="text-light"><a href="{{route('beranda')}}"><span>HOTEL</span>LY</a></h1>
             </div>
@@ -41,6 +40,7 @@
             <nav class="nav-menu d-none d-lg-block">
                 <ul>
                     <li class="{{Request::segment(1) == null ? 'active' : ''}}"><a href="{{route('beranda')}}">Beranda</a></li>
+                    <li class="{{Request::segment(1) == 'about' ? 'active' : ''}}"><a href="#about">About</a></li>
                     <li class="{{Request::segment(1) == 'data-kamar' ? 'active' : ''}}"><a href="{{route('beranda.kamar')}}">Kamar</a></li>
                     <li class="{{Request::segment(1) == 'data-fasilitas' ? 'active' : ''}}"><a href="{{route('beranda.fasilitas')}}">Fasilitas</a></li>
                     @guest
