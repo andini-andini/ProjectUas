@@ -18,7 +18,9 @@ class HomeController extends Controller
 
     public function kamar()
     {
-        return view('user.kamar');
+        $kamar = Kamar::get();
+        // return view('welcome', compact('kamar'));
+        return view('user.kamar', compact('kamar'));
     }
 
     public function fasilitas()
