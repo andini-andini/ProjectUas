@@ -108,8 +108,8 @@ a:active, a:hover {
 }
 
 body {
-  background: #fff none repeat scroll 0 0;
-  color: #444;
+  background: rgb(0, 0, 0) none repeat scroll 0 0;
+  color: rgb(255, 255, 255);
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   text-align: left;
@@ -1581,10 +1581,10 @@ preview-2
 }
 
 .project-menu li a {
-  background: #fff none repeat scroll 0 0;
+  background: rgb(0, 0, 0) none repeat scroll 0 0;
   border: 1px solid #444;
   border-radius: 20px;
-  color: #444;
+  color: rgb(255, 255, 255);
   cursor: pointer;
   display: inline-block;
   font-size: 14px;
@@ -1596,8 +1596,8 @@ preview-2
 }
 
 .project-menu li a.active, .project-menu li a:hover {
-  border-color: #3EC1D5;
-  background: #3EC1D5;
+  border-color: #cda45e;
+  background: #cda45e;
   color: #fff;
   text-decoration: none;
 }
@@ -1612,11 +1612,11 @@ preview-2
 
 .single-awesome-project {
   overflow: hidden;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .first-item {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .awesome-img {
@@ -2224,7 +2224,7 @@ preview-2
 }
 
 .blog-meta {
-  border-bottom: 1px dotted #fff;
+  border-bottom: 1px dotted #cda45e;
   padding: 10px 0;
 }
 
@@ -2239,7 +2239,7 @@ preview-2
 }
 
 .blog-content-right .comments-type > a, .blog-content-right .date-type, .blog-content-right .blog-meta span.comments-type, .blog-content-right .blog-text p {
-  color: #fff;
+  color: #cda45e;
   letter-spacing: 1px;
 }
 
@@ -2308,14 +2308,14 @@ preview-2
 }
 
 .left-blog {
-  background: #f9f9f9 none repeat scroll 0 0;
+  background: #000000 none repeat scroll 0 0;
   margin-bottom: 30px;
   overflow: hidden;
   padding-bottom: 20px;
 }
 
 .left-blog li {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #cda45e;
   display: block;
 }
 
@@ -2328,7 +2328,7 @@ preview-2
 }
 
 .recent-single-post {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #cda45e;
   display: block;
   overflow: hidden;
   padding: 15px 10px;
@@ -2371,7 +2371,7 @@ preview-2
 }
 
 .pst-content p a:hover, .left-blog ul li a:hover {
-  color: #3EC1D5;
+  color: #cda45e;
 }
 
 .blog-page .single-blog {
@@ -2440,7 +2440,7 @@ preview-2
 }
 
 .entry-meta span a:hover {
-  color: #3EC1D5;
+  color: #cda45e;
 }
 
 .post-information .entry-meta {
@@ -2462,7 +2462,7 @@ preview-2
 
 .entry-content blockquote {
   background: #fff none repeat scroll 0 0;
-  border-left: 5px solid #3EC1D5;
+  border-left: 5px solid #cda45e;
   font-size: 17.5px;
   font-style: italic;
   margin: 0 0 20px 40px;
@@ -2470,8 +2470,8 @@ preview-2
 }
 
 .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
-  background-color: #3EC1D5;
-  border-color: #3EC1D5;
+  background-color: #cda45e;
+  border-color: #cda45e;
   color: #fff;
   cursor: default;
   z-index: 3;

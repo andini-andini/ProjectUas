@@ -88,6 +88,147 @@
         </div>
     </div>
 
+<!-- ======= Portfolio Section ======= -->
+<div id="portfolio" class="portfolio-area area-padding fix">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="section-headline text-left">
+            <h3 style="color: rgb(83, 83, 83)">Gallery</h3>
+            <h2 style="color: #cda45e">Some photos from Our Hotel</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row wesome-project-1 fix">
+        <!-- Start Portfolio -page -->
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="awesome-menu ">
+            <ul class="project-menu">
+              <li>
+                <a href="#" class="active" data-filter="*">All</a>
+              </li>
+              <li>
+                <a href="#" data-filter=".party">Party</a>
+              </li>
+              <li>
+                <a href="#" data-filter=".restaurant">Restaurant</a>
+              </li>
+              <li>
+                <a href="#" data-filter=".photo">Photoshop</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row awesome-project-content">
+        <!-- single-awesome-project start -->
+        <div class="col-md-4 col-sm-4 col-xs-12 party">
+          <div class="single-awesome-project">
+            <div class="awesome-img">
+              <a href="#"><img src="templates/user/assets/img/portfolio/1.jpg" alt="" /></a>
+              <div class="add-actions text-center">
+                <div class="project-dec">
+                  <a class="venobox" data-gall="myGallery" href="templates/user/assets/img/portfolio/1.jpg">
+                    <h4>Men Party</h4>
+                    <span>Photoshot</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- single-awesome-project end -->
+        <!-- single-awesome-project start -->
+        <div class="col-md-4 col-sm-4 col-xs-12 party">
+          <div class="single-awesome-project">
+            <div class="awesome-img">
+              <a href="#"><img src="templates/user/assets/img/portfolio/2.jpg" alt="" /></a>
+              <div class="add-actions text-center">
+                <div class="project-dec">
+                  <a class="venobox" data-gall="myGallery" href="templates/user/assets/img/portfolio/2.jpg">
+                    <h4>Birthday Patry</h4>
+                    <span>Photoshot</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- single-awesome-project end -->
+        <!-- single-awesome-project start -->
+        <div class="col-md-4 col-sm-4 col-xs-12 photo restaurant">
+          <div class="single-awesome-project">
+            <div class="awesome-img">
+              <a href="#"><img src="templates/user/assets/img/portfolio/3.jpg" alt="" /></a>
+              <div class="add-actions text-center">
+                <div class="project-dec">
+                  <a class="venobox" data-gall="myGallery" href="templates/user/assets/img/portfolio/3.jpg">
+                    <h4>Restaurant</h4>
+                    <span>Room</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- single-awesome-project end -->
+        <!-- single-awesome-project start -->
+        <div class="col-md-4 col-sm-4 col-xs-12 party">
+          <div class="single-awesome-project">
+            <div class="awesome-img">
+              <a href="#"><img src="templates/user/assets/img/portfolio/4.jpg" alt="" /></a>
+              <div class="add-actions text-center">
+                <div class="project-dec">
+                  <a class="venobox" data-gall="myGallery" href="templates/user/assets/img/portfolio/4.jpg">
+                    <h4>Christmas Party</h4>
+                    <span>Photoshot</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- single-awesome-project end -->
+        <!-- single-awesome-project start -->
+        <div class="col-md-4 col-sm-4 col-xs-12 restaurant">
+          <div class="single-awesome-project">
+            <div class="awesome-img">
+              <a href="#"><img src="templates/user/assets/img/portfolio/5.jpg" alt="" /></a>
+              <div class="add-actions text-center text-center">
+                <div class="project-dec">
+                  <a class="venobox" data-gall="myGallery" href="templates/user/assets/img/portfolio/5.jpg">
+                    <h4>Middle Eastern Food</h4>
+                    <span>Food</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- single-awesome-project end -->
+        <!-- single-awesome-project start -->
+        <div class="col-md-4 col-sm-4 col-xs-12 photo">
+          <div class="single-awesome-project">
+            <div class="awesome-img">
+              <a href="#"><img src="templates/user/assets/img/portfolio/6.jpg" alt="" /></a>
+              <div class="add-actions text-center">
+                <div class="project-dec">
+                  <a class="venobox" data-gall="myGallery" href="templates/user/assets/img/portfolio/6.jpg">
+                    <h4>Receptionist</h4>
+                    <span>Room</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- single-awesome-project end -->
+      </div>
+    </div>
+  </div><!-- End Portfolio Section -->
+
+
 </main>
 
 @endsection
