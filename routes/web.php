@@ -30,6 +30,7 @@ Auth::routes();
 Route::middleware(['auth'])->group(function () {
     Route::post('/kamar/pemesanan', [HomeController::class, 'pemesanan'])->name('home.pemesanan');
     Route::resource('dashboard', DashboardController::class);
+    Route::get('pemesanan/cetak-resi/{id}', [UserReservasiController::class, 'cetakResi'])->name('pemesanan.cetak');
     Route::resource('pemesanan', UserReservasiController::class);
     Route::middleware(['admin'])->group(function () {
         Route::get('api/reservasi/get-status/{id}', [ReservasiController::class, 'getStatus'])->name('api.getstatus');

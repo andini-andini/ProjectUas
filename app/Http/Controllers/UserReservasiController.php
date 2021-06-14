@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Kamar;
 use App\Models\Reservasi;
+use PDF;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Yajra\DataTables\Facades\DataTables;
@@ -39,6 +40,8 @@ class UserReservasiController extends Controller
                     $button = '<div class="btn-group" role="group">';
                     if ($data->status == 0) {
                         $button .= '<a href="/pemesanan/' . $data->id . '/edit" class="btn btn-sm btn-info"><i class="fas fa-edit text-light"></i></a>';
+                    } else {
+                        $button .= '<a href="/pemesanan/cetak-resi/' . $data->id . '" class="btn btn-sm btn-info" target="_blank"><i class="fas fa-download text-light"></i></a>';
                     }
                     $button .= '<a href="javascript:void(0)" data-bs-toggle="modal" data-bs-id="' . $data->id . '" data-bs-target="#showPemesananModal" class="btn btn-sm btn-success btn-show-pemesanan text-light"><i class="fas fa-eye"></i></a>';
                     $button .= '<a href="javascript:void(0)" data-bs-toggle="modal" data-bs-id="' . $data->id . '" data-bs-target="#deletePemesananModal" class="btn btn-sm btn-danger btn-delete-pemesanan text-light"><i class="fas fa-trash"></i></a>';
@@ -149,5 +152,25 @@ class UserReservasiController extends Controller
             'id' => $id
         ])->delete();
         return response()->json(['success' => true], 200);
+    }
+
+    public function cetakResi($id)
+    {
+        $data = Reservasi::where([
+            'user_id' => Auth::user()->id,
+            'id' => $id
+        ])->first();
+        $cin = $data->check_in;
+        $cout = $data->check_out;
+        $price = $data->kamar->price;
+        $day = dateDiffInDays($cin, $cout);
+        $total = $day * $price;
+        $dataPrice = [
+            'days' => $day,
+            'totalPrice' => $total,
+            'price' => $price
+        ];
+        $pdf = PDF::loadview('user.reservasi.print', ['data' => $data, 'dataPrice' => $dataPrice]);
+        return $pdf->stream();
     }
 }
