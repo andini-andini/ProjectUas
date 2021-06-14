@@ -99,6 +99,15 @@
 
                         @endif
 
+                        @if (Auth::user()->role == "usr")
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('pemesanan.index')}}" aria-expanded="false">
+                                <i class="fa fa-table" aria-hidden="true"></i>
+                                <span class="hide-menu">Data Reservasi</span>
+                            </a>
+                        </li>
+                        @endif
+
                         <li class="text-center p-20 upgrade-btn">
                             <a class="btn d-grid btn-danger text-white" href="{{ route('logout') }}" onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">Log Out</a>

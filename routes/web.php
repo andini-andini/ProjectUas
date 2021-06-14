@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\KamarController;
 use App\Http\Controllers\ReservasiController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\UserReservasiController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -27,7 +28,9 @@ Route::get('/data-kamar/{id}', [HomeController::class, 'showKamar'])->name('bera
 
 Auth::routes();
 Route::middleware(['auth'])->group(function () {
+    Route::post('/kamar/pemesanan', [HomeController::class, 'pemesanan'])->name('home.pemesanan');
     Route::resource('dashboard', DashboardController::class);
+    Route::resource('pemesanan', UserReservasiController::class);
     Route::middleware(['admin'])->group(function () {
         Route::get('api/reservasi/get-status/{id}', [ReservasiController::class, 'getStatus'])->name('api.getstatus');
         Route::get('api/kamar-fasilitas/{id}', [KamarController::class, 'kamarFasilitas'])->name('api.kamarfasilitas');

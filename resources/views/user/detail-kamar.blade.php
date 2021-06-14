@@ -13,16 +13,23 @@
                             <h2 style="color: #cda45e">Detail Kamar</h2>
                         </div>
                     </div>
+                    @if (Session::has('error'))
+                    <div class="col-12">
+                        <div class="alert alert-danger">
+                            {{Session::get('error')}}
+                        </div>
+                    </div>
+                    @endif
                 </div>
                 <div class="row">
-                    <div class="col-md-8" >
+                    <div class="col-md-8">
                         <img src="{{asset('storage/kamar/'.$kamar->image)}}" class="w-100 img-thumbnail mb-4" style="height: 590px" alt="">
-                        <h3 style="color: #ffffff" >{{$kamar->name}}</h3>
+                        <h3 style="color: #ffffff">{{$kamar->name}}</h3>
                         <h4 class="text-primary">Rp {{number_format($kamar->price, 0, ',', '.')}}<sub>/malam</sub> </h4>
                         <hr>
-                        <h5 style="color: #ffffff" >Overview</h5>
-                        <p style="color: #ffffff" >{{$kamar->description}}</p>
-                        <h5 style="color: #ffffff" >Fasilitas</h5>
+                        <h5 style="color: #ffffff">Overview</h5>
+                        <p style="color: #ffffff">{{$kamar->description}}</p>
+                        <h5 style="color: #ffffff">Fasilitas</h5>
                         <div class="row">
                             {{-- Jika kamar mempunyai fasilitas --}}
                             @if ($kamar->fasilitas)
@@ -54,26 +61,26 @@
                                         </h5>
                                     </div>
                                 </div>
-                                <form action="" method="POST">
+                                <form action="{{route('home.pemesanan')}}" method="POST">
                                     @csrf
                                     <input type="hidden" name="kamar_id" value="{{ $kamar->id}}">
                                     <div class="form-group">
                                         <label for="check_in">Check-in</label>
-                                        <input type="date" class="form-control" id="check_in" name="check_in" placeholder="Check-in">
+                                        <input type="date" class="form-control" id="check_in" name="check_in" required placeholder="Check-in">
                                         @error('check_in')
                                         <small class="text-danger">{{$message}}</small>
                                         @enderror
                                     </div>
                                     <div class="form-group">
                                         <label for="check_out">Check-out</label>
-                                        <input type="date" class="form-control" id="check_out" name="check_out" placeholder="Check-out">
+                                        <input type="date" class="form-control" id="check_out" name="check_out" required placeholder="Check-out">
                                         @error('check_out')
                                         <small class="text-danger">{{$message}}</small>
                                         @enderror
                                     </div>
                                     <div class="form-group">
                                         <label for="guest">Jumlah Orang</label>
-                                        <input type="number" class="form-control" id="guest" name="guest" placeholder="Jumlah Orang" min="1">
+                                        <input type="number" class="form-control" id="guest" name="guest" required placeholder="Jumlah Orang" min="1">
 
                                         @error('guest')
                                         <small class="text-danger">{{$message}}</small>
@@ -88,11 +95,11 @@
                                         </div>
                                     </div>
                                     @if (Auth::user())
-                                    {{-- @if (isset($reserv))
+                                    @if (isset($exists))
                                     <button type="button" class="btn btn-danger w-100" disabled>Sudah Dipesan</button>
-                                    @else --}}
+                                    @else
                                     <button type="submit" style="border-color: #cda45e" class="btn btn-primary w-100">Pesan Sekarang</button>
-                                    {{-- @endif --}}
+                                    @endif
                                     @else
                                     <a href="{{ route('login')}}" class="btn btn-primary w-100">Login Terlebih Dahulu</a>
                                     @endif

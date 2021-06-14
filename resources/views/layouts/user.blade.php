@@ -57,11 +57,9 @@
                     </li>
                     @endif
                     @else
-                    @if (Auth::user()->role == "adm")
                     <li>
                         <a href="{{ route('dashboard.index') }}">{{ __('Dashboard') }}</a>
                     </li>
-                    @endif
                     <li>
                         <a href="{{ route('logout') }}" onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
