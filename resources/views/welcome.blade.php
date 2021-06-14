@@ -38,14 +38,14 @@
     </div>
   </section>
 <main>
-    <div id="blog" class="blog-area">
+    <div id="blog" class="blog-area" style="background-color: rgb(17, 17, 17)">
         <div class="blog-inner area-padding">
             <div class="blog-overly"></div>
             <div class="container ">
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12">
-                        <div class="section-headline text-center">
-                            <h2>Kamar Terfavorit</h2>
+                        <div class="section-headline text-left">
+                            <h2 style="color: #cda45e">Favorite Room</h2>
                         </div>
                     </div>
                 </div>
@@ -63,15 +63,15 @@
                     <div class="col-md-4 col-sm-4 col-xs-12">
                         <div class="single-blog">
                             <div class="single-blog-img">
-                                <a href="{{route('beranda.showkamar', $item->id)}}">
-                                    <img src="{{asset('storage/kamar/' . $item->image)}}" class="img-thumbnail" alt="">
+                                <a href="{{route('beranda.showkamar', $item->id)}}" >
+                                    <img src="{{asset('storage/kamar/' . $item->image)}}"  style="height: 300px" class="img-thumbnail" alt="">
                                 </a>
                             </div>
                             <div class="blog-text mt-3">
                                 <h4>
                                     <a href="{{route('beranda.showkamar', $item->id)}}">{{$item->name}}</a>
                                 </h4>
-                                <p>
+                                <p style="color: #ffffff">
                                     {{strlen($item->description) > 100 ? substr($item->description, 0, 100) . '...' : $item->description}}
                                 </p>
                             </div>

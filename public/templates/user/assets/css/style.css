@@ -792,8 +792,8 @@ div#preloader {
 
 .ready-btn.right-btn {
   margin-right: 15px;
-  background: #3EC1D5;
-  border: 1px solid #3EC1D5 !important;
+  background: #d9ba85;
+  border: 1px solid #d9ba85 !important;
 }
 
 .ready-btn.right-btn:hover {
@@ -1653,7 +1653,7 @@ preview-2
 }
 
 .add-actions {
-  background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0;
+  background: #cda45e62 none repeat scroll 0 0;
   bottom: 30px;
   display: block;
   height: 100%;
@@ -1977,7 +1977,7 @@ preview-2
 # Quote
 --------------------------------------------------------------*/
 .suscribe-area {
-  background: #3EC1D5 none repeat scroll 0 0;
+  background: #cda45e none repeat scroll 0 0;
   padding: 30px 0;
 }
 
@@ -1999,7 +1999,7 @@ preview-2
 .sus-btn {
   background: #fff none repeat scroll 0 0;
   border: 2px solid #fff;
-  color: #3EC1D5;
+  color: #cda45e;
   display: inline-block;
   font-size: 16px;
   font-weight: 700;
@@ -2011,7 +2011,7 @@ preview-2
 }
 
 .sus-btn:hover {
-  background: #3EC1D5 none repeat scroll 0 0;
+  background: #cda45e none repeat scroll 0 0;
   border: 2px solid #fff;
   color: #fff;
 }
@@ -2161,24 +2161,24 @@ preview-2
 }
 
 .blog-text h4 a {
-  color: #444;
+  color: rgb(255, 255, 255);
   text-decoration: none;
 }
 
 .blog-text h4 {
-  color: #444;
+  color: rgb(255, 255, 255);
   margin-bottom: 15px;
 }
 
 .blog-btn {
   border-bottom: 1px dotted #444;
-  color: #444;
+  color: rgb(255, 255, 255);
   text-decoration: none;
 }
 
 .blog-btn {
   border-bottom: 1px dotted #444;
-  color: #444;
+  color: rgb(255, 255, 255);
   display: inline-block;
   padding: 0 1px 5px 0;
   position: relative;
@@ -2203,7 +2203,7 @@ preview-2
 }
 
 .blog-btn:hover {
-  color: #333;
+  color: rgb(255, 255, 255);
   text-decoration: none;
 }
 
@@ -2229,7 +2229,7 @@ preview-2
 }
 
 .comments-type > a, .date-type, .blog-meta span.comments-type {
-  color: #333;
+  color: rgb(255, 255, 255);
   letter-spacing: 1px;
   margin-right: 5px;
 }
@@ -2246,10 +2246,10 @@ preview-2
 .single-blog .ready-btn {
   border: 1px solid #444;
   border-radius: 30px;
-  color: #444;
+  color: rgb(255, 255, 255);
   cursor: pointer;
   display: inline-block;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 500;
   margin-top: 10px;
   padding: 10px 20px;
@@ -2511,8 +2511,8 @@ preview-2
 }
 
 .sharing-icon a:hover {
-  color: #3EC1D5;
-  border: 1px solid #3EC1D5;
+  color: #cda45e;
+  border: 1px solid #cda45e;
 }
 
 .single-blog .author-avatar {
@@ -2637,7 +2637,7 @@ span.email-notes {
 
 .comment-respond input[type="submit"] {
   background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-  border: 1px solid #3ec1d5;
+  border: 1px solid #cda45e;
   border-radius: 20px;
   box-shadow: none;
   color: #444;
@@ -2663,9 +2663,9 @@ span.email-notes {
 }
 
 .comment-respond input[type=submit]:hover {
-  border: 1px solid #3EC1D5;
+  border: 1px solid #cda45e;
   color: #fff;
-  background: #3EC1D5;
+  background: #cda45e;
 }
 
 .single-blog .blog-pagination {

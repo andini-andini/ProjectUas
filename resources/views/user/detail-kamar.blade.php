@@ -3,32 +3,32 @@
 @section('content')
 <main class="my-5">
 
-    <div id="blog" class="blog-area">
+    <div id="blog" class="blog-area" style="background-color: rgb(17, 17, 17)">
         <div class="blog-inner area-padding">
             <div class="blog-overly"></div>
             <div class="container ">
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="section-headline text-center">
-                            <h2>Detail Kamar</h2>
+                            <h2 style="color: #cda45e">Detail Kamar</h2>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-8">
-                        <img src="{{asset('storage/kamar/'.$kamar->image)}}" class="w-100 img-thumbnail mb-4" alt="">
-                        <h3>{{$kamar->name}}</h3>
+                    <div class="col-md-8" >
+                        <img src="{{asset('storage/kamar/'.$kamar->image)}}" class="w-100 img-thumbnail mb-4" style="height: 590px" alt="">
+                        <h3 style="color: #ffffff" >{{$kamar->name}}</h3>
                         <h4 class="text-primary">Rp {{number_format($kamar->price, 0, ',', '.')}}<sub>/malam</sub> </h4>
                         <hr>
-                        <h5>Overview</h5>
-                        <p>{{$kamar->description}}</p>
-                        <h5>Fasilitas</h5>
+                        <h5 style="color: #ffffff" >Overview</h5>
+                        <p style="color: #ffffff" >{{$kamar->description}}</p>
+                        <h5 style="color: #ffffff" >Fasilitas</h5>
                         <div class="row">
                             {{-- Jika kamar mempunyai fasilitas --}}
                             @if ($kamar->fasilitas)
                             @foreach ($kamar->fasilitas as $item)
                             <div class="col-md-6">
-                                <span class="badge badge-info p-2">{{$item->name}}</span>
+                                <span class="badge badge-info p-2" style="background-color: #cda45e">{{$item->name}}</span>
                             </div>
                             @endforeach
                             @else
@@ -91,7 +91,7 @@
                                     {{-- @if (isset($reserv))
                                     <button type="button" class="btn btn-danger w-100" disabled>Sudah Dipesan</button>
                                     @else --}}
-                                    <button type="submit" class="btn btn-primary w-100">Pesan Sekarang</button>
+                                    <button type="submit" style="border-color: #cda45e" class="btn btn-primary w-100">Pesan Sekarang</button>
                                     {{-- @endif --}}
                                     @else
                                     <a href="{{ route('login')}}" class="btn btn-primary w-100">Login Terlebih Dahulu</a>
