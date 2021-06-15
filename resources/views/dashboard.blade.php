@@ -17,7 +17,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="white-box">
-                <h3 class="box-title">Halo, {{Auth::user()->name}}. Selamat Datang Di Sistem Informasi Hotel</h3>
+                <h3 class="box-title">Hello, {{Auth::user()->name}}. Welcome to Hotel Information System</h3>
             </div>
         </div>
     </div>

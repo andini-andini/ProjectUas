@@ -39,11 +39,11 @@
 
             <nav class="nav-menu d-none d-lg-block">
                 <ul>
-                    <li class="{{Request::segment(1) == null ? 'active' : ''}}"><a href="{{route('beranda')}}">Beranda</a></li>
+                    <li class="{{Request::segment(1) == null ? 'active' : ''}}"><a href="{{route('beranda')}}">Home</a></li>
                     <li class="{{Request::segment(1) == 'about' ? 'active' : ''}}"><a href="{{route('beranda')}}/#about">About</a></li>
-                    <li class="{{Request::segment(1) == 'data-kamar' ? 'active' : ''}}"><a href="{{route('beranda.kamar')}}">Kamar</a></li>
-                    <li class="{{Request::segment(1) == 'data-fasilitas' ? 'active' : ''}}"><a href="{{route('beranda.fasilitas')}}">Fasilitas</a></li>
-                    <li class="{{Request::segment(1) == 'portfolio' ? 'active' : ''}}"><a href="{{route('beranda')}}/#portfolio">Galery</a></li>
+                    <li class="{{Request::segment(1) == 'data-kamar' ? 'active' : ''}}"><a href="{{route('beranda.kamar')}}">Rooms</a></li>
+                    <li class="{{Request::segment(1) == 'data-fasilitas' ? 'active' : ''}}"><a href="{{route('beranda.fasilitas')}}">Facilities</a></li>
+                    <li class="{{Request::segment(1) == 'portfolio' ? 'active' : ''}}"><a href="{{route('beranda')}}/#portfolio">Gallery</a></li>
                     @guest
                     @if (Route::has('login'))
                     <li>

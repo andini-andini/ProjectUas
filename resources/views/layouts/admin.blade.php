@@ -67,7 +67,7 @@
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('beranda')}}" aria-expanded="false">
                                 <i class="fa fa-table" aria-hidden="true"></i>
-                                <span class="hide-table">Halaman Utama</span>
+                                <span class="hide-table">Main Page</span>
                             </a>
                         </li>
                         @if (Auth::user()->role == "adm")
@@ -75,25 +75,25 @@
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('user.index')}}" aria-expanded="false">
                                 <i class="fa fa-table" aria-hidden="true"></i>
-                                <span class="hide-table">Data User</span>
+                                <span class="hide-table">User Data</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('fasilitas.index')}}" aria-expanded="false">
                                 <i class="fa fa-table" aria-hidden="true"></i>
-                                <span class="hide-menu">Data Fasilitas</span>
+                                <span class="hide-menu">Facility Data</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('kamar.index')}}" aria-expanded="false">
                                 <i class="fa fa-table" aria-hidden="true"></i>
-                                <span class="hide-menu">Data Kamar</span>
+                                <span class="hide-menu">Room Data</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('reservasi.index')}}" aria-expanded="false">
                                 <i class="fa fa-table" aria-hidden="true"></i>
-                                <span class="hide-menu">Data Reservasi</span>
+                                <span class="hide-menu">Reservation Data</span>
                             </a>
                         </li>
 
@@ -103,7 +103,7 @@
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('pemesanan.index')}}" aria-expanded="false">
                                 <i class="fa fa-table" aria-hidden="true"></i>
-                                <span class="hide-menu">Data Reservasi</span>
+                                <span class="hide-menu">Reservation Data</span>
                             </a>
                         </li>
                         @endif
@@ -125,7 +125,7 @@
         </aside>
         <div class="page-wrapper" style="min-height: 250px;">
             @yield('content')
-            <footer class="footer text-center"> 2021 © Hotelly
+            <footer class="footer text-center"> 2021©Hotelly.All Rights Reserved
             </footer>
         </div>
     </div>

@@ -22,15 +22,16 @@
           </div>
         </div>
         <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-          <h3>Hotelly Lampung</h3><br>
+          <h3>Hotelly</h3><br>
           <p class="fst-italic">
-            Hotelly memiliki 286 kamar yang akan memberikan kenyamanan extra untuk anda.
-            Hanya berjarak 15 menit naik mobil dari Pusat Wisata Lampung. Tiap kamar dilengkapi TV layar datar,
-            shower, dan WIFI . Hotelly juga menyediakan sarapan prasmanan dan area parkir di lokasi hotel yang luas.
+            Hotelly has 286 rooms that will provide extra comfort for you.
+            It is only 15 minutes by car from Lampung Tourism Center.
+            Each room is equipped with a flat screen TV, shower and WIFI .
+            Hotelly also provides a buffet breakfast and a large on-site parking area.
           </p><br>
           <p>
-            Hotelly terletak di area Wisata . Dekat ke Pantai, area perkantoran, dan area gudang industri,
-            sehingga cocok untuk berlibur atau keperluan bisnis.
+            Hotelly is located in the tourist area. Close to the beach, office areas,
+            and industrial warehouse areas, making it suitable for vacation or business purposes.
           </p>
         </div>
       </div>
@@ -54,7 +55,7 @@
                     @if ($kamar->isEmpty())
                     <div class="col-12">
                         <div class="alert alert-danger">
-                            Kamar masih belum tersedia.
+                            Room still not available.
                         </div>
                     </div>
                     @else
@@ -76,7 +77,7 @@
                                 </p>
                             </div>
                             <span>
-                                <a href="{{route('beranda.showkamar', $item->id)}}" class="ready-btn">Detail</a>
+                                <a href="{{route('beranda.showkamar', $item->id)}}" class="ready-btn">Details</a>
                             </span>
                         </div>
                     </div>

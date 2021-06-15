@@ -35,7 +35,7 @@
                             @if ($kamar->fasilitas)
                             @foreach ($kamar->fasilitas as $item)
                             <div class="col-md-6">
-                                <span class="badge badge-info p-2" style="background-color: #cda45e">{{$item->name}}</span>
+                                <br><span class="badge badge-info p-2" style="background-color: #cda45e">{{$item->name}}</span>
                             </div>
                             @endforeach
                             @else
