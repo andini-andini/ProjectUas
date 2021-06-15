@@ -25,7 +25,7 @@
                     <div class="col-md-8">
                         <img src="{{asset('storage/kamar/'.$kamar->image)}}" class="w-100 img-thumbnail mb-4" style="height: 590px" alt="">
                         <h3 style="color: #ffffff">{{$kamar->name}}</h3>
-                        <h4 class="text-primary">Rp {{number_format($kamar->price, 0, ',', '.')}}<sub>/malam</sub> </h4>
+                        <h4 style="color: #cda45e" class="text">Rp {{number_format($kamar->price, 0, ',', '.')}}<sub>/malam</sub> </h4>
                         <hr>
                         <h5 style="color: #ffffff">Overview</h5>
                         <p style="color: #ffffff">{{$kamar->description}}</p>
@@ -56,7 +56,7 @@
                                 <div class="card mb-3">
                                     <div class="card-body text-center">
                                         <h5 class="card-title mb-1">{{$kamar->name}}</h5>
-                                        <h5 class="m-0 font-weight-bold text-primary">Rp. {{$kamar->price}}
+                                        <h5 style="color: #cda45e" class="m-0 font-weight-bold text">Rp. {{$kamar->price}}
                                             <sub class="font-weight-normal">/malam</sub>
                                         </h5>
                                     </div>
@@ -90,7 +90,6 @@
                                         <div class="card-body text-center">
                                             <h5 class="card-title mb-1 font-weight-bold">TOTAL HARGA</h5>
                                             <h5 class="m-0 font-weight-bold text-danger">Rp. <span id="set-price"></span>
-                                                <sub class="font-weight-normal">/malam</sub>
                                             </h5>
                                         </div>
                                     </div>
@@ -98,10 +97,10 @@
                                     @if (isset($exists))
                                     <button type="button" class="btn btn-danger w-100" disabled>Sudah Dipesan</button>
                                     @else
-                                    <button type="submit" style="border-color: #cda45e" class="btn btn-primary w-100">Pesan Sekarang</button>
+                                    <button type="submit" class="btn btn-hover w-100">Pesan Sekarang</button>
                                     @endif
                                     @else
-                                    <a href="{{ route('login')}}" class="btn btn-primary w-100">Login Terlebih Dahulu</a>
+                                    <a href="{{ route('login')}}" class="btn btn-hover w-100">Login Terlebih Dahulu</a>
                                     @endif
                                 </form>
                             </div>

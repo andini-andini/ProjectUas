@@ -2202,6 +2202,16 @@ preview-2
   right: -30px;
 }
 
+.btn-hover{
+    color: #ffffff;
+    background-color: #cda45e;
+}
+
+.btn-hover:hover{
+    color: rgb(255, 255, 255);
+    background-color: #ad8a51;
+}
+
 .blog-btn:hover {
   color: rgb(255, 255, 255);
   text-decoration: none;
