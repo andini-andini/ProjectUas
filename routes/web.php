@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CobaController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FasilitasController;
 use App\Http\Controllers\HomeController;
@@ -20,6 +21,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/coba', function () {
+    return view('coba');
+});
+
+Route::post('upload', [CobaController::class, 'coba'])->name('upload.coba');
 
 Route::get('/', [HomeController::class, 'index'])->name('beranda');
 Route::get('/data-kamar', [HomeController::class, 'kamar'])->name('beranda.kamar');
