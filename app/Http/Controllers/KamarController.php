@@ -27,7 +27,7 @@ class KamarController extends Controller
                 ->addIndexColumn()
                 ->editColumn('image', function ($data) {
                     if ($data->image) {
-                        return '<img class="img-thumbnail w-100" src="/storage/kamar/' . $data->image . '" />';
+                        return '<img class="img-thumbnail w-100" src="' . $data->image . '" />';
                     }
                     return '<img class="img-thumbnail w-100" src="img/not.png" />';
                 })
@@ -66,7 +66,7 @@ class KamarController extends Controller
     {
         $payload = $request->only(['name', 'description', 'price']);
         if ($request->hasFile('image')) {
-            $payload['image'] = uploadFile($request->file('image'), 'kamar');
+            $payload['image'] = uploadFile($request->file('image'), 'hotelly');
         }
         $kamar = Kamar::create($payload);
         if ($request->fasilitas) $kamar->fasilitas()->sync($request->fasilitas);
